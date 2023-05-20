@@ -96,7 +96,7 @@ class AppCard extends StatelessWidget {
               showBottomSheet(
                 context: context,
                 builder: (context) {
-                  return Container(
+                  return const SizedBox(
                     height: 200,
                     width: double.infinity,
                     child: Center(child: Text("Тут будет описнаие услуг")),

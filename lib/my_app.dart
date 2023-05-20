@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foreman/style/style_app.dart';
 import 'package:foreman/widgets/app_ap_bar.dart';
 import 'package:foreman/widgets/app_application.dart';
 import 'package:foreman/widgets/app_contacts.dart';
@@ -37,9 +36,13 @@ class HomeWidget extends StatelessWidget {
         WidgetAppApBar(),
         WidgetAppTitle(),
         WidgetAppLozung(),
+        SizedBox(height: 40),
         WidgetAppUslugi(),
+        SizedBox(height: 40),
         WidgetAppMastera(),
+        SizedBox(height: 40),
         WidgetAppContacts(),
+        SizedBox(height: 40),
         WidgetAppApplication()
       ],
     ));

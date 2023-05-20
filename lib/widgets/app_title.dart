@@ -8,22 +8,31 @@ class WidgetAppTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final mpSize = MediaQuery.of(context).size.width;
     return Stack(
-      alignment: AlignmentDirectional.centerStart,
+      //alignment: AlignmentDirectional.centerStart,
       children: [
-        Image.asset(
-          'assets/image/image1.png',
-          fit: BoxFit.fitHeight,
+        ClipRRect(
+          borderRadius: const BorderRadius.only(
+            bottomLeft: Radius.circular(20),
+            bottomRight: Radius.circular(20),
+          ),
+          child: Image.asset(
+            'assets/image/image1.png',
+            height: 400,
+            fit: BoxFit.fitHeight,
+          ),
         ),
         SizedBox(
           width: mpSize * 0.5,
+          height: 400,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                'Ремонт стиральных\nмашин с гарантией\nв Санкт-Петербурге',
+                'Ремонт стиральных машин с гарантией в Санкт-Петербурге',
+                softWrap: true,
                 textAlign: TextAlign.center,
-                style: AppTextStyle.heading3,
+                style: AppTextStyle.heading2,
               ),
-              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
                 child: Text(

@@ -6,20 +6,12 @@ class WidgetAppLozung extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Table(
+    return Column(
       children: [
-        TableRow(
-          children: [
-            widgetText('Бесплатная\nдиагностика', 'assets/icon/1.png'),
-            widgetText('Доступные\nцены', 'assets/icon/2.png'),
-          ],
-        ),
-        TableRow(
-          children: [
-            widgetText('Качественный\nремонт', 'assets/icon/3.png'),
-            widgetText('Гарантия\n6 месяцев', 'assets/icon/4.png'),
-          ],
-        ),
+        widgetText('Бесплатная диагностика', 'assets/icon/1.png'),
+        widgetText('Доступные цены', 'assets/icon/2.png'),
+        widgetText('Качественный ремонт', 'assets/icon/3.png'),
+        widgetText('Гарантия 6 месяцев', 'assets/icon/4.png'),
       ],
     );
   }
@@ -28,17 +20,23 @@ class WidgetAppLozung extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          // const SizedBox(
+          //   width: 50,
+          // ),
           Image.asset(
             path,
-            width: 30,
-            height: 30,
+            width: 100,
+            height: 100,
           ),
           const SizedBox(
-            width: 20,
+            width: 30,
           ),
-          Text(name, style: AppTextStyle.heading4),
+          Text(
+            name,
+            softWrap: true,
+            style: AppTextStyle.heading3,
+          ),
         ],
       ),
     );

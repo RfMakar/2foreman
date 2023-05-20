@@ -16,7 +16,7 @@ class WidgetAppMastera extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(30),
-                  bottomLeft: Radius.circular(80),
+                  bottomLeft: Radius.circular(30),
                 ),
                 child: Image.asset('assets/mastera/1.png'),
               ),
@@ -47,7 +47,7 @@ class WidgetAppMastera extends StatelessWidget {
               flex: 1,
               child: ClipRRect(
                 borderRadius: const BorderRadius.only(
-                  topRight: Radius.circular(80),
+                  topRight: Radius.circular(30),
                   bottomRight: Radius.circular(30),
                 ),
                 child: Image.asset('assets/mastera/2.png'),
