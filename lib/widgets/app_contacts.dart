@@ -6,38 +6,39 @@ class WidgetAppContacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Column(
-        children: [
-          // Text('Контакты', style: AppTextStyle.heading2),
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Image.asset('assets/image/image3.png'),
+    return Column(
+      children: [
+        Text('Контакты', style: AppTextStyle.heading2),
+        const SizedBox(height: 40),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  'assets/image/image3.png',
                 ),
               ),
-              Expanded(
-                child: Column(
-                  children: [
-                    appText('г.Санкт-Петербург'),
-                    Text(
-                      'Работаем во всех районах',
-                      style: AppTextStyle.heading5,
-                    ),
+            ),
+            Expanded(
+              child: Column(
+                children: [
+                  appText('г.Санкт-Петербург'),
+                  Text(
+                    'Работаем во всех районах',
+                    style: AppTextStyle.heading5,
+                  ),
 
-                    const SizedBox(height: 10),
-                    button(Icons.phone, 'Позвонить'),
-                    // const SizedBox(height: 10),
-                    // button(Icons.telegram, 'Написать'),
-                  ],
-                ),
+                  const SizedBox(height: 10),
+                  button(Icons.phone, 'Позвонить'),
+                  // const SizedBox(height: 10),
+                  // button(Icons.telegram, 'Написать'),
+                ],
               ),
-            ],
-          ),
-        ],
-      ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 

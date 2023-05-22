@@ -17,13 +17,13 @@ class WidgetAppTitle extends StatelessWidget {
           ),
           child: Image.asset(
             'assets/image/image1.png',
-            height: 400,
+            height: 300,
             fit: BoxFit.fitHeight,
           ),
         ),
         SizedBox(
-          width: mpSize * 0.5,
-          height: 400,
+          width: mpSize * 0.6,
+          height: 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -35,9 +35,12 @@ class WidgetAppTitle extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  'Позвонить',
-                  style: AppTextStyle.heading3,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    'Позвонить',
+                    style: AppTextStyle.heading3,
+                  ),
                 ),
               )
             ],

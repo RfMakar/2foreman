@@ -9,6 +9,7 @@ class WidgetAppUslugi extends StatelessWidget {
     return Column(
       children: [
         Text('Услуги', style: AppTextStyle.heading2),
+        const SizedBox(height: 40),
         Table(
           children: [
             const TableRow(
@@ -107,7 +108,6 @@ class AppCard extends StatelessWidget {
             child: Text(
               title,
               textAlign: TextAlign.center,
-              style: AppTextStyle.heading5,
             ),
           )
         ],

@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        useMaterial3: true,
-      ),
+          //useMaterial3: true,
+          ),
       home: const HomeWidget(),
     );
   }
@@ -35,6 +35,7 @@ class HomeWidget extends StatelessWidget {
       children: const [
         WidgetAppApBar(),
         WidgetAppTitle(),
+        SizedBox(height: 40),
         WidgetAppLozung(),
         SizedBox(height: 40),
         WidgetAppUslugi(),
