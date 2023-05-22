@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreman/style/style_app.dart';
+import 'package:foreman/widgets/button_call.dart';
 
 class WidgetAppContacts extends StatelessWidget {
   const WidgetAppContacts({super.key});
@@ -28,11 +29,8 @@ class WidgetAppContacts extends StatelessWidget {
                     'Работаем во всех районах',
                     style: AppTextStyle.heading5,
                   ),
-
                   const SizedBox(height: 10),
-                  button(Icons.phone, 'Позвонить'),
-                  // const SizedBox(height: 10),
-                  // button(Icons.telegram, 'Написать'),
+                  const ButtonCall(),
                 ],
               ),
             ),
@@ -44,15 +42,5 @@ class WidgetAppContacts extends StatelessWidget {
 
   Widget appText(String name) {
     return Text(name, style: AppTextStyle.heading3);
-  }
-
-  Widget button(IconData icons, String phone) {
-    return ElevatedButton(
-      onPressed: () {},
-      child: Text(
-        phone,
-        style: AppTextStyle.heading3,
-      ),
-    );
   }
 }

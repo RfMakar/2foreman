@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreman/style/style_app.dart';
+import 'package:foreman/widgets/button_call.dart';
 
 class WidgetAppTitle extends StatelessWidget {
   const WidgetAppTitle({super.key});
@@ -33,16 +34,7 @@ class WidgetAppTitle extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: AppTextStyle.heading2,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Text(
-                    'Позвонить',
-                    style: AppTextStyle.heading3,
-                  ),
-                ),
-              )
+              const ButtonCall(),
             ],
           ),
         ),

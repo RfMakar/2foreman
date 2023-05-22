@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreman/style/style_app.dart';
+import 'package:foreman/widgets/button_call.dart';
 
 class WidgetAppUslugi extends StatelessWidget {
   const WidgetAppUslugi({super.key});
@@ -86,31 +87,121 @@ class AppCard extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.all(Radius.circular(16)),
-            child: Image.asset(
-              path,
-              fit: BoxFit.fill,
-            ),
+            child: Image.asset(path, fit: BoxFit.fill),
           ),
           const SizedBox(height: 15),
           ElevatedButton(
             onPressed: () {
-              showBottomSheet(
+              showModalBottomSheet(
                 context: context,
                 builder: (context) {
-                  return const SizedBox(
-                    height: 200,
-                    width: double.infinity,
-                    child: Center(child: Text("Тут будет описнаие услуг")),
-                  );
+                  return const SheetUsluga();
                 },
               );
             },
             child: Text(
               title,
               textAlign: TextAlign.center,
+              style: AppTextStyle.heading5,
             ),
           )
         ],
+      ),
+    );
+  }
+}
+
+class SheetUsluga extends StatelessWidget {
+  const SheetUsluga({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(width: 60),
+            Text(
+              'Не вращает барабан',
+              style: AppTextStyle.heading3,
+            ),
+            IconButton(
+              onPressed: () => Navigator.pop(context),
+              icon: const Icon(Icons.close),
+            ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Table(
+            defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+            border: TableBorder.all(
+              color: AppColor.color,
+              width: 1,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(4),
+              ),
+            ),
+            children: [
+              TableRow(
+                decoration: const BoxDecoration(color: AppColor.color),
+                children: [
+                  text('Возможные причины неисправности:'),
+                  text('Стоимость услуги:'),
+                ],
+              ),
+              TableRow(
+                children: [
+                  text1('неисправность двигателя'),
+                  text1('замена двигателя 1500'),
+                ],
+              ),
+              TableRow(
+                children: [
+                  text1('неисправность блока управления'),
+                  text1('ремонт от 2000'),
+                ],
+              ),
+              TableRow(
+                children: [
+                  text1('заклинили подшипники'),
+                  text1('ремонт от 2000'),
+                ],
+              ),
+              TableRow(
+                children: [
+                  text1('износ щеток электродвигателя'),
+                  text1('замена щеток 2000'),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const ButtonCallMaster(),
+      ],
+    );
+  }
+
+  Widget text(String text) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: const TextStyle(
+        fontSize: 16,
+        fontStyle: FontStyle.italic,
+        //fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+
+  Widget text1(String text) {
+    return Text(
+      text,
+      textAlign: TextAlign.center,
+      style: const TextStyle(
+        fontSize: 14,
+        fontStyle: FontStyle.italic,
       ),
     );
   }
