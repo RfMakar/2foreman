@@ -148,7 +148,7 @@ class WidgetAppUslugi extends StatelessWidget {
       Usluga(
         0,
         'assets/uslugi/9.png',
-        'Стиральна машина протекает ',
+        'Машинка протекает ',
         [
           'повреждена манжета',
           'повреждение патрубков',

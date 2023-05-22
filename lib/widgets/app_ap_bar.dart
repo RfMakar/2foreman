@@ -16,7 +16,10 @@ class WidgetAppApBar extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('г. Санкт-Петербург', style: AppTextStyle.heading3),
+              Text(
+                'г. Санкт-Петербург',
+                style: AppTextStyle.heading3,
+              ),
               Text(
                 'c 8:00 до 23:00, без выходных',
                 style: AppTextStyle.heading5,

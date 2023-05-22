@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foreman/style/style_app.dart';
 import 'package:foreman/widgets/app_ap_bar.dart';
 import 'package:foreman/widgets/app_application.dart';
 import 'package:foreman/widgets/app_contacts.dart';
@@ -14,8 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          // useMaterial3: true,
-          ),
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: AppColor.color,
+        ),
+      ),
       home: const HomeWidget(),
     );
   }
