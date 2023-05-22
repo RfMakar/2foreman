@@ -6,6 +6,11 @@ class WidgetAppLozung extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mpSize = MediaQuery.of(context).size.width;
+    return mpSize > 800 ? widgetWeb() : widgetMobile();
+  }
+
+  Column widgetMobile() {
     return Column(
       children: [
         rowTable('assets/icon/1.png', 'Бесплатная диагностика'),
@@ -15,6 +20,25 @@ class WidgetAppLozung extends StatelessWidget {
         rowTable('assets/icon/3.png', 'Качественный ремонт'),
         const Divider(),
         rowTable('assets/icon/4.png', 'Гарантия 6 месяцев'),
+      ],
+    );
+  }
+
+  Table widgetWeb() {
+    return Table(
+      children: [
+        TableRow(
+          children: [
+            rowTable('assets/icon/1.png', 'Бесплатная диагностика'),
+            rowTable('assets/icon/2.png', 'Доступные цены'),
+          ],
+        ),
+        TableRow(
+          children: [
+            rowTable('assets/icon/3.png', 'Качественный ремонт'),
+            rowTable('assets/icon/4.png', 'Гарантия 6 месяцев'),
+          ],
+        ),
       ],
     );
   }

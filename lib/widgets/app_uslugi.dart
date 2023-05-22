@@ -163,17 +163,17 @@ class WidgetAppUslugi extends StatelessWidget {
         ],
       ),
     ];
-
+    final mpSize = MediaQuery.of(context).size.width;
     return Column(
       children: [
         Text('Услуги', style: AppTextStyle.heading2),
-        const SizedBox(height: 40),
+        const SizedBox(height: 30),
         GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
           shrinkWrap: true,
           itemCount: listUslu.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: mpSize > 800 ? 3 : 2,
             mainAxisSpacing: 8,
             crossAxisSpacing: 8,
           ),

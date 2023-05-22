@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppTextStyle {
-  static final heading = GoogleFonts.lobster(fontSize: 30);
-  static final heading2 = GoogleFonts.lobster(fontSize: 24);
-  static final heading3 = GoogleFonts.lobster(fontSize: 20);
-  static final heading4 = GoogleFonts.lobster(fontSize: 18);
-  static final heading5 = GoogleFonts.lobster(fontSize: 12);
+  static var heading = const TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+  );
+  static var heading2 = const TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+  );
+  static var heading3 = const TextStyle(fontSize: 20);
+  static var heading4 = const TextStyle(fontSize: 18);
+  static var heading5 = const TextStyle(fontSize: 14);
 }
 
 abstract class AppColor {
   static const color = Color.fromRGBO(67, 150, 251, 1);
-  //static const color = Color.fromARGB(255, 255, 62, 78);
   static const color2 = Color.fromARGB(255, 255, 255, 255);
 }

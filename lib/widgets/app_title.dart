@@ -8,8 +8,8 @@ class WidgetAppTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mpSize = MediaQuery.of(context).size.width;
+
     return Stack(
-      //alignment: AlignmentDirectional.centerStart,
       children: [
         ClipRRect(
           borderRadius: const BorderRadius.only(
@@ -18,13 +18,13 @@ class WidgetAppTitle extends StatelessWidget {
           ),
           child: Image.asset(
             'assets/image/image1.png',
-            height: 300,
+            height: mpSize > 680 ? 450 : 300,
             fit: BoxFit.fitHeight,
           ),
         ),
         SizedBox(
-          width: mpSize * 0.6,
-          height: 300,
+          width: mpSize > 1100 ? (mpSize - mpSize * 0.2) * 0.4 : mpSize * 0.6,
+          height: mpSize > 680 ? 450 : 300,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

@@ -33,7 +33,7 @@ class HomeWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size.width;
     return Scaffold(
         body: ListView(
-      padding: size < 1170
+      padding: size < 1100
           ? const EdgeInsets.all(8)
           : EdgeInsets.fromLTRB(size * 0.2, 0, size * 0.2, 0),
       children: const [
