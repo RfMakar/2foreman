@@ -35,7 +35,7 @@ class HomeWidget extends StatelessWidget {
         body: ListView(
       padding: size < 1100
           ? const EdgeInsets.all(8)
-          : EdgeInsets.fromLTRB(size * 0.2, 0, size * 0.2, 0),
+          : EdgeInsets.fromLTRB(size * 0.15, 0, size * 0.15, 0),
       children: const [
         WidgetAppApBar(),
         WidgetAppTitle(),
