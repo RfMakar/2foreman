@@ -11,29 +11,22 @@ class WidgetAppContacts extends StatelessWidget {
       children: [
         Text('Контакты', style: AppTextStyle.heading2),
         const SizedBox(height: 40),
-        Row(
+        Column(
           children: [
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  'assets/image/image3.png',
-                ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                'assets/image/image3.png',
+                height: 350,
               ),
             ),
-            Expanded(
-              child: Column(
-                children: [
-                  appText('г.Санкт-Петербург'),
-                  Text(
-                    'Работаем во всех районах',
-                    style: AppTextStyle.heading5,
-                  ),
-                  const SizedBox(height: 10),
-                  const ButtonCall(),
-                ],
-              ),
+            appText('г.Санкт-Петербург'),
+            Text(
+              'Работаем во всех районах',
+              style: AppTextStyle.heading4,
             ),
+            const SizedBox(height: 10),
+            const ButtonCall(),
           ],
         ),
       ],
@@ -41,6 +34,6 @@ class WidgetAppContacts extends StatelessWidget {
   }
 
   Widget appText(String name) {
-    return Text(name, style: AppTextStyle.heading3);
+    return Text(name, style: AppTextStyle.heading);
   }
 }

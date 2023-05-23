@@ -204,6 +204,12 @@ class AppCard extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.fromLTRB(0, 0, 0, 8),
           child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              elevation: 4,
+              backgroundColor: const Color.fromRGBO(255, 255, 0, 1),
+              foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+              textStyle: AppTextStyle.heading4,
+            ),
             onPressed: () {
               showModalBottomSheet(
                 context: context,

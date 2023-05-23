@@ -8,6 +8,12 @@ class ButtonCall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        elevation: 4,
+        backgroundColor: const Color.fromRGBO(255, 255, 0, 1),
+        foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+        textStyle: AppTextStyle.heading,
+      ),
       onPressed: () async {
         final call = Uri.parse('tel:+79219140899');
         if (await canLaunchUrl(call)) {
@@ -36,6 +42,12 @@ class ButtonCallMaster extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          elevation: 4,
+          backgroundColor: const Color.fromRGBO(255, 255, 0, 1),
+          foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+          textStyle: AppTextStyle.heading4,
+        ),
         onPressed: () async {
           final call = Uri.parse('tel:+79219140899');
           if (await canLaunchUrl(call)) {

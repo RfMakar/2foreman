@@ -19,7 +19,7 @@ class WidgetAppTitle extends StatelessWidget {
             ),
             child: Image.asset(
               'assets/image/image1.png',
-              height: mpSize > 800 ? 480 : 320,
+              height: mpSize > 800 ? 580 : 320,
               fit: BoxFit.fitHeight,
             ),
           ),
