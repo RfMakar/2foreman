@@ -24,13 +24,13 @@ class WidgetAppTitle extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: mpSize > 1100 ? (mpSize - mpSize * 0.2) * 0.4 : mpSize * 0.6,
+            width: mpSize > 1100 ? (mpSize - mpSize * 0.2) * 0.4 : mpSize * 0.5,
             height: mpSize > 800 ? 480 : 320,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text(
-                  'Ремонт стиральных машин с гарантией в Санкт-Петербурге',
+                  'Ремонт стиральных машин с гарантией!',
                   softWrap: true,
                   textAlign: TextAlign.center,
                   style: AppTextStyle.heading2,
