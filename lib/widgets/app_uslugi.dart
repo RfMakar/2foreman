@@ -235,7 +235,8 @@ class SheetUsluga extends StatelessWidget {
   final Usluga usluga;
   @override
   Widget build(BuildContext context) {
-    return Wrap(
+    return ListView(
+      shrinkWrap: true,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

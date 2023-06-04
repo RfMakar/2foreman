@@ -8,7 +8,7 @@ class WidgetAppApBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColor.color2,
-      height: 70,
+      height: 80,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -21,7 +21,7 @@ class WidgetAppApBar extends StatelessWidget {
                 style: AppTextStyle.heading3,
               ),
               Text(
-                'c 8:00 до 23:00, без выходных',
+                'c 8:00 до 23:00 без выходных',
                 style: AppTextStyle.heading5,
               ),
             ],

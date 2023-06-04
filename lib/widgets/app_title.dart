@@ -11,6 +11,7 @@ class WidgetAppTitle extends StatelessWidget {
 
     return Center(
       child: Stack(
+        alignment: AlignmentDirectional.centerStart,
         children: [
           ClipRRect(
             borderRadius: const BorderRadius.only(
@@ -19,23 +20,27 @@ class WidgetAppTitle extends StatelessWidget {
             ),
             child: Image.asset(
               'assets/image/image1.png',
-              height: mpSize > 800 ? 580 : 320,
+              height: mpSize > 800 ? 580 : 300,
               fit: BoxFit.fitHeight,
             ),
           ),
           SizedBox(
-            width: mpSize > 1100 ? (mpSize - mpSize * 0.2) * 0.4 : mpSize * 0.5,
-            height: mpSize > 800 ? 480 : 320,
+            width: mpSize > 1100 ? (mpSize - mpSize * 0.2) * 0.4 : mpSize * 0.6,
+            height: mpSize > 800 ? 480 : 280,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Ремонт стиральных машин с гарантией!',
+                  'Ремонт стиральных машин с гарантией',
                   softWrap: true,
-                  textAlign: TextAlign.center,
+                  // textAlign: TextAlign.center,
                   style: AppTextStyle.heading2,
                 ),
-                const ButtonCall(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: const ButtonCall(),
+                ),
               ],
             ),
           ),
