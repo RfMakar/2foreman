@@ -168,20 +168,23 @@ class WidgetAppUslugi extends StatelessWidget {
       children: [
         Text('Услуги', style: AppTextStyle.heading2),
         const SizedBox(height: 30),
-        GridView.builder(
-          physics: const NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          itemCount: listUslu.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: mpSize > 800 ? 3 : 2,
-            mainAxisSpacing: 8,
-            crossAxisSpacing: 8,
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: GridView.builder(
+            physics: const NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemCount: listUslu.length,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: mpSize > 800 ? 3 : 2,
+              mainAxisSpacing: 8,
+              crossAxisSpacing: 8,
+            ),
+            itemBuilder: (context, index) {
+              return AppCard(
+                usluga: listUslu[index],
+              );
+            },
           ),
-          itemBuilder: (context, index) {
-            return AppCard(
-              usluga: listUslu[index],
-            );
-          },
         )
       ],
     );
@@ -206,8 +209,8 @@ class AppCard extends StatelessWidget {
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
               elevation: 4,
-              backgroundColor: const Color.fromRGBO(255, 255, 0, 1),
-              foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+              backgroundColor: Color.fromRGBO(121, 155, 206, 1),
+              foregroundColor: const Color.fromARGB(255, 255, 255, 255),
               textStyle: AppTextStyle.heading4,
             ),
             onPressed: () {

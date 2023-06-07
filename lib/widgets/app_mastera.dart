@@ -41,7 +41,7 @@ class WidgetAppMastera extends StatelessWidget {
 
   Widget card(String path, String name, String title) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(16.0),
       child: Column(
         children: [
           ClipRRect(

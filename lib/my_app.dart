@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:foreman/style/style_app.dart';
-import 'package:foreman/widgets/app_ap_bar.dart';
 import 'package:foreman/widgets/app_application.dart';
 import 'package:foreman/widgets/app_contacts.dart';
 import 'package:foreman/widgets/app_lozung.dart';
 import 'package:foreman/widgets/app_mastera.dart';
 import 'package:foreman/widgets/app_title.dart';
 import 'package:foreman/widgets/app_uslugi.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,9 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: AppColor.color,
-        ),
       ),
       home: const HomeWidget(),
     );
@@ -32,24 +28,38 @@ class HomeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size.width;
     return Scaffold(
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Color.fromRGBO(121, 155, 206, 1),
+          foregroundColor: Color.fromARGB(255, 255, 255, 255),
+          onPressed: () async {
+            final call = Uri.parse('tel:+79219140899');
+            if (await canLaunchUrl(call)) {
+              launchUrl(
+                call,
+              );
+            } else {
+              throw 'Could not launch $call';
+            }
+          },
+          child: const Icon(Icons.call),
+        ),
         body: ListView(
-      padding: size < 1100
-          ? const EdgeInsets.all(8)
-          : EdgeInsets.fromLTRB(size * 0.15, 0, size * 0.15, 0),
-      children: const [
-        WidgetAppApBar(),
-        WidgetAppTitle(),
-        SizedBox(height: 40),
-        WidgetAppLozung(),
-        SizedBox(height: 40),
-        WidgetAppUslugi(),
-        SizedBox(height: 40),
-        WidgetAppMastera(),
-        SizedBox(height: 40),
-        WidgetAppContacts(),
-        SizedBox(height: 40),
-        WidgetAppApplication()
-      ],
-    ));
+          padding: size < 1100
+              ? const EdgeInsets.all(0)
+              : EdgeInsets.fromLTRB(size * 0.15, 0, size * 0.15, 0),
+          children: const [
+            WidgetAppTitle(),
+            // SizedBox(height: 20),
+            WidgetAppLozung(),
+            SizedBox(height: 30),
+            WidgetAppUslugi(),
+            SizedBox(height: 30),
+            WidgetAppMastera(),
+            SizedBox(height: 30),
+            WidgetAppContacts(),
+            SizedBox(height: 10),
+            WidgetAppApplication()
+          ],
+        ));
   }
 }

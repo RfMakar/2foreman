@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class AppTextStyle {
   static var heading = const TextStyle(
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: FontWeight.bold,
   );
   static var heading2 = const TextStyle(

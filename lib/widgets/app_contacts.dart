@@ -25,8 +25,6 @@ class WidgetAppContacts extends StatelessWidget {
               'Работаем во всех районах',
               style: AppTextStyle.heading4,
             ),
-            const SizedBox(height: 10),
-            const ButtonCall(),
           ],
         ),
       ],
