@@ -9,6 +9,14 @@ class WidgetAppApplication extends StatelessWidget {
     return Column(
       children: [
         Text(
+          'ИНН 510890132262',
+          style: AppTextStyle.heading5,
+        ),
+        Text(
+          'Сорокин Михаил Васильевич',
+          style: AppTextStyle.heading5,
+        ),
+        Text(
           '"2 Мастера", 2023г',
           style: AppTextStyle.heading5,
         ),

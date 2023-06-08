@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreman/style/style_app.dart';
-import 'package:foreman/widgets/button_call.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class WidgetAppContacts extends StatelessWidget {
   const WidgetAppContacts({super.key});
@@ -24,6 +24,23 @@ class WidgetAppContacts extends StatelessWidget {
             Text(
               'Работаем во всех районах',
               style: AppTextStyle.heading4,
+            ),
+            IconButton(
+              onPressed: () async {
+                final call = Uri.parse('https://t.me/+79219140899');
+                if (await canLaunchUrl(call)) {
+                  launchUrl(
+                    call,
+                  );
+                } else {
+                  throw 'Could not launch $call';
+                }
+              },
+              icon: Icon(
+                Icons.telegram,
+                color: Colors.blue,
+                size: 60,
+              ),
             ),
           ],
         ),

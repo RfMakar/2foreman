@@ -29,7 +29,7 @@ class HomeWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size.width;
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Color.fromRGBO(121, 155, 206, 1),
+          backgroundColor: Colors.green,
           foregroundColor: Color.fromARGB(255, 255, 255, 255),
           onPressed: () async {
             final call = Uri.parse('tel:+79219140899');
